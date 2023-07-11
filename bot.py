@@ -8,7 +8,6 @@ from vk_api.keyboard import VkKeyboard, VkKeyboardColor
 
 def f(*args):
     print(args)
-    print('hello')
 
 signal.signal(signal.SIGINT, f)
 
@@ -16,7 +15,7 @@ signal.signal(signal.SIGINT, signal.default_int_handler)
 
 load_dotenv()
 token = os.getenv("ACCESS_TOKEN")
-manager_id = os.getenv("USER_ID")
+manager_id = os.getenv("MANAGER_ID")
 session = vk_api.VkApi(token=token)
 
 def send_message(user_id, message, keyboard = None):
