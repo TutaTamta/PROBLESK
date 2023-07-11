@@ -1,17 +1,9 @@
 import vk_api
 import os
-import signal
 from dotenv import load_dotenv
 
 from vk_api.longpoll import VkLongPoll, VkEventType
 from vk_api.keyboard import VkKeyboard, VkKeyboardColor
-
-def f(*args):
-    print(args)
-
-signal.signal(signal.SIGINT, f)
-
-signal.signal(signal.SIGINT, signal.default_int_handler)
 
 load_dotenv()
 token = os.getenv("ACCESS_TOKEN")
